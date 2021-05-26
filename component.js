@@ -1,11 +1,15 @@
+'use strict';
 
-    function SayHello() {
-        return (
-            <div>
-                <h2>Hello world</h2>
-            </div>
-        );
-    }
-    
-    ReactDOM.render(<SayHello/>, document.getElementById('container')); 
+function SayHello() {
+    return React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h2',
+            null,
+            'Hello world'
+        )
+    );
+}
 
+ReactDOM.render(React.createElement(SayHello, null), document.getElementById('container'));
